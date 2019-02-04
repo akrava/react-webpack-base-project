@@ -1,0 +1,60 @@
+{
+  "name": "react-webpack-base-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf ./dist",
+    "start": "node app.js",
+    "heroku-postbuild": "npm run build:prod",
+    "build:prod": "npm run clean && webpack --mode production",
+    "build": "npm run clean && webpack --mode development --progress",
+    "dev": "npm run build && npm-run-all --parallel watch:server watch:build",
+    "watch:build": "webpack --watch --mode development",
+    "watch:server": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akrava/react-webpack-base-project.git"
+  },
+  "author": "akrava",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akrava/react-webpack-base-project/issues"
+  },
+  "homepage": "https://github.com/akrava/react-webpack-base-project#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/preset-react": "^7.0.0",
+    "@types/dotenv": "^6.1.0",
+    "@types/html-webpack-plugin": "^3.2.0",
+    "@types/mini-css-extract-plugin": "^0.2.0",
+    "@types/node-sass": "^3.10.32",
+    "@types/prop-types": "^15.5.6",
+    "@types/react": "^16.7.11",
+    "@types/react-dom": "^16.0.11",
+    "@types/webpack": "^4.4.20",
+    "babel-loader": "^8.0.4",
+    "css-loader": "^1.0.1",
+    "dotenv": "^6.1.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.4.5",
+    "node-sass": "^4.10.0",
+    "nodemon": "^1.18.9",
+    "npm-run-all": "^4.1.5",
+    "postcss-loader": "^3.0.0",
+    "precss": "^4.0.0",
+    "prop-types": "^15.6.2",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "sass-loader": "^7.1.0",
+    "webpack": "^4.26.1",
+    "webpack-cli": "^3.2.1"
+  }
+}
