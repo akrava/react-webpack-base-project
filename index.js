@@ -6,7 +6,7 @@ const app = express();
 const PORT = parseInt(config.ServerPort);
 
 if (!Number.isInteger(PORT)) {
-    console.error('Bad port, please set PORT as anv variable');
+    console.error('Bad port, please set PORT as env variable');
     process.abort();
 }
 
